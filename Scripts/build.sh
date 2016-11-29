@@ -4,9 +4,10 @@
 
 # Change this the name of your project. This will be the name of the final executables as well.
 project="ci-build"
+unitybin="/opt/Unity/Editor/Unity"
 
 echo "Attempting to build $project for Windows"
-/Applications/Unity/Unity.app/Contents/MacOS/Unity \
+$(unitybin) \
   -batchmode \
   -nographics \
   -silent-crashes \
@@ -16,7 +17,7 @@ echo "Attempting to build $project for Windows"
   -quit
 
 echo "Attempting to build $project for OS X"
-/Applications/Unity/Unity.app/Contents/MacOS/Unity \
+$(unitybin) \
   -batchmode \
   -nographics \
   -silent-crashes \
@@ -26,7 +27,7 @@ echo "Attempting to build $project for OS X"
   -quit
 
 echo "Attempting to build $project for Linux"
-/Applications/Unity/Unity.app/Contents/MacOS/Unity \
+$(unitybin) \
   -batchmode \
   -nographics \
   -silent-crashes \
